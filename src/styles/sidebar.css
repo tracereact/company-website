@@ -1,0 +1,5 @@
+@import url(./global.css);
+
+.sidebar {
+  justify-self: flex-end;
+}

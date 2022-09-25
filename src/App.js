@@ -1,12 +1,17 @@
 import React from 'react';
 import './styles/global.css';
+import Footer from './components/footer';
+import Header from './components/header';
+import Sidebar from './components/sidebar';
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        Hello, World!
-      </header>
+      <div className="page">
+        <Header />
+        <Footer />
+      </div>
+      <Sidebar />
     </div>
   );
 };

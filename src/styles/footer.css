@@ -1,0 +1,7 @@
+@import url(./global.css);
+
+.footer {
+  background: var(--hf-background);
+  width: 100%;
+  height: 4rem;
+}
