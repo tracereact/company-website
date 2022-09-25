@@ -4,7 +4,12 @@ import '../styles/sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      Sidebar
+      <a href="https://github.com">
+        <i className="github icon fa fa-github" />
+      </a>
+      <a href="https://linkedin.com/in/travismcginley">
+        <i className="linkedin icon fa fa-linkedin-square" />
+      </a>
     </div>
   );
 };

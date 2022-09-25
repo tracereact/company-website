@@ -2,13 +2,18 @@
 
 :root {
   /* Global variables */
-  --hf-background: linear-gradient(90deg, #dddddd 0%, #ffffff 50%, #dddddd 100%);
+  --hf-background: linear-gradient(
+    90deg,
+    #dddddd 0%,
+    #ffffff 50%,
+    #dddddd 100%
+  );
   --hf-background-alt: #242222;
   --hf-background-color: rgb(31, 41, 55);
   --primary-color: rgb(0, 0, 0);
   --secondary-color: rgb(105, 105, 105);
   --tertiary-color: rgb(218, 0, 0);
-  
+
   /* Global Settings */
   font-family: Roboto, sans-serif;
 }
@@ -38,6 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
   min-width: 30rem;
   width: 80vw;
   max-width: 70rem;

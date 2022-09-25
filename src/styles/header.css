@@ -1,1 +1,7 @@
 @import url(./global.css);
+
+.header {
+  background: var(--hf-background);
+  width: 100%;
+  height: 4rem;
+}

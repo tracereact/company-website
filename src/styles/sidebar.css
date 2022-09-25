@@ -1,5 +1,40 @@
 @import url(./global.css);
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   justify-self: flex-end;
+  height: 10rem;
+  min-width: 5rem;
+  border: 5px orange solid;
+  margin-left: auto;
+  margin-right: 1rem;
+  background: white;
+  position: static;
+  border-radius: 1.5rem;
+}
+
+.icon {
+  font-size: 48px;
+  color:black;
+}
+
+.icon:hover {
+  animation: shake 100ms 3 ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
