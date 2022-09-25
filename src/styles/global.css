@@ -14,7 +14,6 @@
   
   /* Global Settings */
   font-family: Roboto, sans-serif;
-  background: var(--hf-background);
 }
 
 /* CSS RESET */
@@ -24,6 +23,16 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #ff0000;
+  background-image: linear-gradient(45deg, #ff0000 0%, #000000 100%);
 }
 
 html {
