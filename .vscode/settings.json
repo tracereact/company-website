@@ -1,0 +1,14 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "emmet.syntaxProfiles": {
+  
+  },
+  "emmet.includeLanguages": {
+       "javascript": "javascriptreact"
+  }
+}
