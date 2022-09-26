@@ -9,6 +9,15 @@ const Header = () => {
         <Icon />
         <div className="company-name">tracereact</div>
       </div>
+      <div className="menu">
+        <ul className="menu-items">
+          <li className="menu-item">HOME</li>
+          <li className="menu-item">ABOUT</li>
+          <li className="menu-item">PROJECTS</li>
+          <li className="menu-item">BLOG</li>
+          <li className="menu-item">CONTACT</li>
+        </ul>
+      </div>
     </div>
   );
 };

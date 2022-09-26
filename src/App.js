@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/global.css';
+// import Welcome from './components/welcome';
 import Footer from './components/footer';
 import Header from './components/header';
 import Sidebar from './components/sidebar';

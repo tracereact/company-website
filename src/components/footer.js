@@ -8,7 +8,7 @@ const Footer = () => {
       Copyright &copy; Tracereact, LLC 2022
       </div>
       <div className="icon8">
-        Icons Supplied by&nbsp;
+        Icons supplied by&nbsp;
         <span>
           <a 
             href="https://icons8.com/"

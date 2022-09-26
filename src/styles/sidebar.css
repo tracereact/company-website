@@ -1,7 +1,7 @@
 @import url(./global.css);
 
-.root {
-  --border: 0.15rem solid black;
+:root {
+  --bar-width: 3rem;
 }
 
 .sidebar {
@@ -12,7 +12,7 @@
   justify-self: flex-end;
   height: 20rem;
   gap: 1rem;
-  min-width: 2rem;
+  min-width: var(--bar-width);
   /* margin-left: auto; */
   margin-right: 1rem;
   position: fixed;
@@ -47,6 +47,7 @@
   display: flex;
   background: rgba(255, 255, 255, 0.678);
   padding: 0.5rem;
+  min-width: var(--bar-width);
   justify-content: center;
   align-items: center;
   border-radius: 30%;
@@ -55,8 +56,8 @@
 
 .sidebar .return-top:hover {
   cursor: pointer;
-  animation: up-down 750ms infinite ease;
-  animation-delay: 0.25s;
+  animation: up-down 750ms infinite ease-in-out;
+  animation-delay: 0.15s;
 }
 
 @keyframes shake {
@@ -75,6 +76,10 @@
 
 @keyframes up-down {
   0% {
+    transform: translateY(0rem);
+  }
+
+  50% {
     transform: translateY(-0.5rem);
   }
 
