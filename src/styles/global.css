@@ -49,7 +49,7 @@
   min-width: 30rem;
   width: 80vw;
   max-width: 70rem;
-  min-height: 100vh;
+  min-height: 200vh;
   background-color: rgba(255, 255, 255, 0.801);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -57,4 +57,12 @@
 html {
   height: auto;
   scroll-behavior: smooth;
+}
+
+/* Link to area on page */
+.anchor {
+  display: block;
+  position: relative;
+  top: -10rem;
+  visibility: hidden;
 }

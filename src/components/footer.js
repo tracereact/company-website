@@ -1,9 +1,12 @@
 import React from 'react';
+import Contact from './contact';
 import '../styles/footer.css';
 
 const Footer = () => {
   return (
     <div className="footer">
+      <div id="contact" className="anchor" />
+      <Contact />
       <div className="copyright">
       Copyright &copy; Tracereact, LLC 2022
       </div>

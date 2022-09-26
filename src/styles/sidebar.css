@@ -39,7 +39,7 @@
 }
 
 .link:hover {
-  animation: shake 100ms 3 ease-in-out;
+  animation: shake 150ms 3 ease-in-out;
   animation-delay: 0.10s;
 }
 

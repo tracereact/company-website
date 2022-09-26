@@ -44,6 +44,7 @@
 }
 
 .menu-item {
+  display: flex;
   padding: 0.2rem 0.5rem;
   border-radius: 2rem;
   border: 0.2rem solid rgba(0, 0, 0, 0);
@@ -53,6 +54,15 @@
   cursor: pointer;
   animation: fill-in 0.55s forwards ease-in-out;
   animation-delay: 0.1s;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.menu-item:active {
+  scale: 0.999;
 }
 
 @keyframes fill-in {
