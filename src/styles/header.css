@@ -51,7 +51,7 @@
 
 .menu-item:hover {
   cursor: pointer;
-  animation: fill-in 1.25s forwards ease-in-out;
+  animation: fill-in 0.55s forwards ease-in-out;
   animation-delay: 0.1s;
 }
 
@@ -60,13 +60,9 @@
     border-color: rgba(0, 0, 0, 0);
     background-color: inherit;
   }
-  25% {
+  50% {
     border-color: var(--tertiary-color);
     background-color: inherit;
-  }
-  75% {
-    border-color: var(--tertiary-color);
-    background-color: var(--tertiary-color);
   }
   100% {
     border-color: var(--tertiary-color);
