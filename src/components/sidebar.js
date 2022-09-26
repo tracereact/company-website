@@ -20,9 +20,11 @@ const Sidebar = () => {
           <i className="linkedin icon fa-brands fa-linkedin" />
         </a>
       </div>
-      <a href="https://linkedin.com/in/travismcginley">
-        <i className="top icon fa-regular fa-angle-up" />
-      </a>
+      <div className="page-top">
+        <a href="https://linkedin.com/in/travismcginley">
+          <i className="icon fa-solid fa-arrow-up" />
+        </a>
+      </div>
     </div>
   );
 };
