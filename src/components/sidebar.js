@@ -4,11 +4,24 @@ import '../styles/sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <a href="https://github.com">
-        <i className="github icon fa fa-github" />
-      </a>
+      <div className="links">
+        <a
+          href="https://github.com/tracereact"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="github icon fa-brands fa-github" />
+        </a>
+        <a
+          href="https://linkedin.com/in/travismcginley"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="linkedin icon fa-brands fa-linkedin" />
+        </a>
+      </div>
       <a href="https://linkedin.com/in/travismcginley">
-        <i className="linkedin icon fa fa-linkedin-square" />
+        <i className="top icon fa-regular fa-angle-up" />
       </a>
     </div>
   );
