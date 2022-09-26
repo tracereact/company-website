@@ -1,13 +1,13 @@
 // Firebase config for Tracecms
 const config = {
-  apiKey: 'AIzaSyDu1p5qkAQFyIYwTK-_S-kUjn0BsYnMZ0Y',
-  authDomain: 'tracecms-8c5fd.firebaseapp.com',
-  databaseURL: 'https://tracecms-8c5fd-default-rtdb.firebaseio.com',
-  projectId: 'tracecms-8c5fd',
-  storageBucket: 'tracecms-8c5fd.appspot.com',
-  messagingSenderId: '611887655199',
-  appId: '1:611887655199:web:3f4c53925e2a45bb74682a',
-  measurementId: 'G-JCV32H2P4Q',
+  apiKey: 'AIzaSyCuh1HidVL4y2PDQmbKYSmNWspNFN5Atvk',
+  authDomain: 'tracereact.firebaseapp.com',
+  databaseURL: 'https://tracereact-default-rtdb.firebaseio.com',
+  projectId: 'tracereact',
+  storageBucket: 'tracereact.appspot.com',
+  messagingSenderId: '326927264632',
+  appId: '1:326927264632:web:6fa20eb9b316af1679368d',
+  measurementId: 'G-X0RPGMDGWC'
 };
 
 const GetFirebaseConfig = () => {

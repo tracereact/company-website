@@ -3,12 +3,12 @@
   "name": "Tracereact - Web development made simple",
   "icons": [
     {
-      "src": "icons8-plus-120.png",
+      "src": "./icons8-plus-120.png",
       "type": "image/png",
       "sizes": "120x120"
     },
     {
-      "src": "icons8-plus-180.png",
+      "src": "./icons8-plus-180.png",
       "type": "image/png",
       "sizes": "180x180"
     }

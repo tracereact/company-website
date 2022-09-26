@@ -21,7 +21,9 @@ const Contact = () => {
             `Name should be at least ${target.minLength} characters; you entered ${target.value.length}.`
           );
         } else if (target.validity.patternMismatch) {
-          setNameErrorMessage('Please enter a valid name (only letters allowed).');
+          setNameErrorMessage(
+            'Please enter a valid name (only letters allowed).'
+          );
         }
         setNameErrorClass('error active');
         break;
@@ -30,7 +32,9 @@ const Contact = () => {
         if (target.validity.valueMissing) {
           setEmailErrorMessage('You need to enter an e-mail address.');
         } else if (target.validity.typeMismatch) {
-          setEmailErrorMessage('Please enter a valid email. Example: john.doe@gmail.com.');
+          setEmailErrorMessage(
+            'Please enter a valid email. Example: john.doe@gmail.com.'
+          );
         } else if (target.validity.tooShort) {
           setEmailErrorMessage(
             `Email should be at least ${target.minLength} characters; you entered ${target.value.length}.`
@@ -79,7 +83,9 @@ const Contact = () => {
 
   // Helper function to get form inputs
   const getInputVal = (name) => {
-    return document.getElementsByName(name)[0] ? document.getElementsByName(name)[0].value : '';
+    return document.getElementsByName(name)[0]
+      ? document.getElementsByName(name)[0].value
+      : '';
   };
 
   // Send data to firebase
@@ -89,10 +95,9 @@ const Contact = () => {
       email: getInputVal('email'),
       question: getInputVal('question'),
       phone: getInputVal('phone'),
-      message: getInputVal('message'),
+      message: getInputVal('message')
     });
   };
-
 
   // Submit form after verifying reCAPTCHA
   const submitForm = (e) => {
@@ -112,57 +117,50 @@ const Contact = () => {
     return true;
   };
 
-
-
   return (
     <div className="contact">
-      <div className="message">
-        Hello, reach out!
-      </div>
+      <div className="message">Hello, reach out!</div>
       <form id="contact" method="post" onSubmit={submitForm} noValidate>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            pattern="[A-zÀ-ž -]+"
-            minLength="2"
-            placeholder="Name"
-            onInput={checkInput}
-            required
-          />
-          <span aria-live="polite" className={nameErrorClass}>
-            {nameErrorMessage}
-          </span>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            minLength="8"
-            placeholder="Email Address"
-            onInput={checkInput}
-            required
-          />
-          <span aria-live="polite" className={emailErrorClass}>
-            {emailErrorMessage}
-          </span>
-          <textarea
-            maxLength="1000"
-            name="message"
-            id="textarea"
-            placeholder="Write us a message here! Give us some more details about what you're looking for."
-          />
-          <button
-            type="submit"
-            id="send"
-          >
-            Send
-          </button>
-          <div
-            className="g-recaptcha"
-            data-sitekey={process.env.REACT_APP_SITE_KEY_PROD}
-            data-size="invisible"
-          />
-        </form>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          pattern="[A-zÀ-ž -]+"
+          minLength="2"
+          placeholder="Name"
+          onInput={checkInput}
+          required
+        />
+        <span aria-live="polite" className={nameErrorClass}>
+          {nameErrorMessage}
+        </span>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          minLength="8"
+          placeholder="Email Address"
+          onInput={checkInput}
+          required
+        />
+        <span aria-live="polite" className={emailErrorClass}>
+          {emailErrorMessage}
+        </span>
+        <textarea
+          maxLength="1000"
+          name="message"
+          id="textarea"
+          placeholder="Write us a message here! Give us some more details about what you're looking for."
+        />
+        <button type="submit" id="send">
+          Send
+        </button>
+        <div
+          className="g-recaptcha"
+          data-sitekey={process.env.REACT_APP_SITE_KEY_PROD}
+          data-size="invisible"
+        />
+      </form>
     </div>
   );
 };

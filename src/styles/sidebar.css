@@ -40,7 +40,7 @@
 
 .link:hover {
   animation: shake 150ms 3 ease-in-out;
-  animation-delay: 0.10s;
+  animation-delay: 0.1s;
 }
 
 .sidebar .return-top {

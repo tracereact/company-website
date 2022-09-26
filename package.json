@@ -19,7 +19,12 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.js\"",
     "pretty": "npx prettier --write .",
-    "pretty-check": "npx eslint-config-prettier ."
+    "pretty-check": "npx eslint-config-prettier .",
+    "firebase-init": "firebase init",
+    "firebase-login": "firebase login",
+    "firebase-logout": "firebase logout",
+    "serve": "firebase serve --only hosting",
+    "deploy": "firebase deploy --only hosting:tracereact"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +53,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "firebase-tools": "^11.10.0",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "serve": "^14.0.1"
   }
 }

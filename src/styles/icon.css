@@ -1,7 +1,7 @@
 @import url(./global.css);
 
 .company-icon {
-  fill:var(--primary-color);
+  fill: var(--primary-color);
   width: 2rem;
   height: auto;
 }
