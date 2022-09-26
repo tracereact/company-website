@@ -48,7 +48,7 @@
 
 .sidebar .return-top:hover {
   cursor: pointer;
-  animation: up-down 750ms infinite ease-out;
+  animation: up-down 750ms 0.25s infinite ease;
 }
 
 @keyframes shake {
