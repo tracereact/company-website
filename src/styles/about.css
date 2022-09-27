@@ -66,3 +66,17 @@
 .about a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 960px) {
+  .about .info {
+    padding: 0;
+  }
+  
+  .about .info .title {
+    text-align: center;
+  }
+
+  .about .image {
+    display: none;
+  }
+}
