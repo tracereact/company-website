@@ -21,7 +21,7 @@
 .contact .info .title {
   font-size: var(--title-size);
   font-weight: bold;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .contact form {

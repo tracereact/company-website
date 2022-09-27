@@ -7,8 +7,8 @@ const Footer = () => {
     <div className="footer">
       <div id="contact" className="anchor" />
       <Contact />
-      <div className="copyright">Copyright &copy; Tracereact, LLC 2022</div>
-      <div className="icon8">
+      <div className="copyright">Copyright &copy; Trace React, LLC 2022</div>
+      <div className="disclaimer">
         Icons supplied by&nbsp;
         <span>
           <a href="https://icons8.com/" target="_blank" rel="noreferrer">
