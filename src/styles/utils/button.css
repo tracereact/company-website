@@ -1,0 +1,45 @@
+@import url('../global.css');
+
+.custom {
+  display: flex;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0);
+  color: var(--primary-color);
+}
+
+.custom:hover {
+  cursor: pointer;
+  animation: fill-in 0.55s forwards ease-in-out;
+  animation-delay: 0.1s;
+}
+
+.custom a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.custom:active {
+  scale: 0.999;
+}
+
+@keyframes fill-in {
+  0% {
+    border-color: inherit;
+    background-color: inherit;
+  }
+  25% {
+    border-color: var(--primary-color);
+    background-color: inherit;
+  }
+  75% {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--hf-background-color);
+  }
+  100% {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--hf-background-color);
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from './utils/button';
 import '../styles/contact.css';
 import SaveMessage from './firebase/firebase-message';
 
@@ -119,7 +120,13 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <div className="message">Hello, reach out!</div>
+      <div className="info">
+        <div className="title">Contact</div>
+        <div className="body">
+          Feel free to reach out with any questions or requests you may have.
+          I will be sure to respond as soon as I am able!
+        </div>
+      </div>
       <form method="post" onSubmit={submitForm} noValidate>
         <input
           type="text"
@@ -155,6 +162,7 @@ const Contact = () => {
         <button type="submit" id="send">
           Send
         </button>
+        <Button type='submit' name='Send' />
         <div
           className="g-recaptcha"
           data-sitekey={process.env.REACT_APP_SITE_KEY_PROD}

@@ -2,10 +2,12 @@
 
 .footer {
   background: var(--hf-background);
-  width: 100%;
+  width: var(--page-width);
+  min-width: var(--page-min-width);
+  max-width: var(--page-max-width);
   min-height: 4rem;
   display: flex;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   justify-content: center;
   flex-direction: column;
   align-items: center;
