@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import '../../styles/utils/button.css';
 
 const Button = (props) => {
-  const { type, name, link } = props;
+  const { type, name, link, onButtonClicked } = props;
 
   Button.propTypes = {
     type: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    link: PropTypes.string
+    link: PropTypes.string,
+    onButtonClicked: PropTypes.func
   };
 
   Button.defaultProps = {
-    link: ''
+    link: '',
+    onButtonClicked: () => {} // Default is to do nothing
   };
 
   if (type === 'submit') {
@@ -27,7 +29,7 @@ const Button = (props) => {
 
   return (
     <div className="custom">
-      <a href={link}>{name}</a>
+      <a href={link} onClick={onButtonClicked}>{name}</a>
     </div>
   );
 };
