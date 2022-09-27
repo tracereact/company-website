@@ -120,7 +120,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="message">Hello, reach out!</div>
-      <form id="contact" method="post" onSubmit={submitForm} noValidate>
+      <form method="post" onSubmit={submitForm} noValidate>
         <input
           type="text"
           id="name"
@@ -150,7 +150,7 @@ const Contact = () => {
           maxLength="1000"
           name="message"
           id="textarea"
-          placeholder="Write us a message here! Give us some more details about what you're looking for."
+          placeholder="Write a message here! Give more details about what you're looking for."
         />
         <button type="submit" id="send">
           Send

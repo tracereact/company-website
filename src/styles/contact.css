@@ -1,1 +1,38 @@
 @import url('./global.css');
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+
+  border: 3px orange solid;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 20rem;
+  border: 3px solid green;
+}
+
+.contact input {
+  width: 100%;
+}
+
+.contact textarea {
+  width: 100%;
+  min-height: 8rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.5rem 0.75rem;
+}
+
+.contact button {
+  padding: 0.25rem 0.5rem;
+}

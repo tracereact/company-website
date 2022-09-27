@@ -1,4 +1,4 @@
-// Firebase config for Tracecms
+// Firebase config for Tracereact
 const config = {
   apiKey: 'AIzaSyCuh1HidVL4y2PDQmbKYSmNWspNFN5Atvk',
   authDomain: 'tracereact.firebaseapp.com',
