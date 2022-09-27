@@ -19,7 +19,7 @@ const SaveMessage = async (clientInfo) => {
   const customId = Math.random().toString(36).slice(2);
   const newDoc = doc(
     firestore,
-    'TR-client-contact',
+    'tr-client-contact',
     `${clientInfo.name} (${customId})`
   );
   await setDoc(newDoc, {
