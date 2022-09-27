@@ -13,7 +13,7 @@ const About = () => {
           <br /><br />
           <em>
             Growing up, I always had a passion for technology. From jail-breaking my PlayStation Portable and iPod touch to opening up old
-            laptops to see how they worked.
+            laptops to see how they worked, I was simply intrigued.
           </em>
           <br /><br />
           <strong>

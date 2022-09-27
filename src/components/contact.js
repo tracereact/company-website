@@ -94,8 +94,6 @@ const Contact = () => {
     SaveMessage({
       name: getInputVal('name'),
       email: getInputVal('email'),
-      question: getInputVal('question'),
-      phone: getInputVal('phone'),
       message: getInputVal('message')
     });
   };
@@ -112,7 +110,7 @@ const Contact = () => {
           sendInfo();
         })
         .catch((error) => {
-          console.error('Error occurred while handling captcha', error);
+          console.error('Error occurred while handling captcha\n', error);
         });
     });
     return true;
