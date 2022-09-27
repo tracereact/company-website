@@ -7,7 +7,7 @@
   --primary-color: #f8efd4;
   --secondary-color: rgb(222, 222, 228);
   --tertiary-color: rgb(218, 0, 0);
-  --page-min-width: 30rem;
+  --page-min-width: 10rem;
   --page-width: 80vw;
   --page-max-width: 70rem;
   --title-size: 2.5rem;
@@ -34,6 +34,8 @@
   justify-content: space-between;
   min-height: 100vh;
   min-width: 100%;
+
+  border: 3px solid red;
 
   /* Background */
 
