@@ -29,7 +29,9 @@ const Button = (props) => {
 
   return (
     <div className="custom">
-      <a href={link} onClick={onButtonClicked}>{name}</a>
+      <a href={link} onClick={onButtonClicked}>
+        {name}
+      </a>
     </div>
   );
 };

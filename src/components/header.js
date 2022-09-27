@@ -30,23 +30,38 @@ const Header = () => {
       >
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-        <ul className={click ? 'menu-items active' : 'menu-items'}>
-          <li className="menu-item">
-            <Button type="link" name="HOME" link="/" onButtonClicked={closeMobileMenu} />
-          </li>
-          <li className="menu-item">
-            <Button type="link" name="ABOUT" link="/#about" onButtonClicked={closeMobileMenu} />
-          </li>
-          {/* <li className="menu-item">
+      <ul className={click ? 'menu-items active' : 'menu-items'}>
+        <li className="menu-item">
+          <Button
+            type="link"
+            name="HOME"
+            link="/"
+            onButtonClicked={closeMobileMenu}
+          />
+        </li>
+        <li className="menu-item">
+          <Button
+            type="link"
+            name="ABOUT"
+            link="/#about"
+            onButtonClicked={closeMobileMenu}
+          />
+        </li>
+        {/* <li className="menu-item">
             <Button type='link' name='PROJECTS' link='/#projects' />
           </li> */}
-          {/* <li className="menu-item">
+        {/* <li className="menu-item">
             <Button type='link' name='BLOG' link='/#' />
           </li> */}
-          <li className="menu-item">
-            <Button type="link" name="CONTACT" link="/#contact" onButtonClicked={closeMobileMenu} />
-          </li>
-        </ul>
+        <li className="menu-item">
+          <Button
+            type="link"
+            name="CONTACT"
+            link="/#contact"
+            onButtonClicked={closeMobileMenu}
+          />
+        </li>
+      </ul>
     </div>
   );
 };

@@ -84,13 +84,12 @@
   }
 }
 
-
 @media screen and (max-width: 960px) {
   .custom {
     border-radius: 0;
     padding: 0;
   }
-  
+
   .custom a {
     padding: 2rem;
     width: 100%;
