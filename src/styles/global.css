@@ -2,17 +2,21 @@
 
 :root {
   /* Global variables */
-  --hf-background: #000000; /* fallback for old browsers */
+
+  /* fallback for old browsers */
+  --hf-background: #000000; 
+  /* Chrome 10-25, Safari 5.1-6 */
   --hf-background: -webkit-linear-gradient(
     to right,
     #434343,
     #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   --hf-background: linear-gradient(
     to right,
     #434343,
     #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 
   --hf-background-alt: #242222;
   --hf-background-color: rgb(31, 41, 55);
@@ -43,17 +47,21 @@
   min-width: 100vw;
 
   /* Background */
-  background: #8e9eab; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+
+  /* fallback for old browsers */
+  background: #8e9eab; 
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient( 
     to right,
     #eef2f3,
     #8e9eab
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(
     to right,
     #eef2f3,
     #8e9eab
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 
 .page {
@@ -61,7 +69,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* margin-left: auto; */
   min-width: 30rem;
   width: 80vw;
   max-width: 70rem;
