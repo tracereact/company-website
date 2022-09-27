@@ -7,10 +7,12 @@ const Contact = () => {
   // Error message states
   const [nameErrorMessage, setNameErrorMessage] = useState('');
   const [emailErrorMessage, setEmailErrorMessage] = useState('');
+  const [textErrorMessage, setTextErrorMessage] = useState('');
 
   // Error class states
   const [nameErrorClass, setNameErrorClass] = useState('error');
   const [emailErrorClass, setEmailErrorClass] = useState('error');
+  const [textErrorClass, setTextErrorClass] = useState('error');
 
   const showError = (target) => {
     switch (target.name) {
@@ -44,6 +46,17 @@ const Contact = () => {
         setEmailErrorClass('error active');
         break;
       }
+      case 'text': {
+        if (target.validity.valueMissing) {
+          setTextErrorMessage('You need to enter a message.');
+        } else if (target.validity.tooShort) {
+          setTextErrorMessage(
+            `Message should be at least ${target.minLength} characters; you entered ${target.value.length}.`
+          );
+        }
+        setTextErrorClass('error active');
+        break;
+      }
       default: {
         throw new Error('Cannot read form input id!');
       }
@@ -56,10 +69,12 @@ const Contact = () => {
       // Reset states for error messages
       setNameErrorMessage('');
       setEmailErrorMessage('');
+      setTextErrorMessage('');
 
       // Reset states for error classes
       setNameErrorClass('error');
       setEmailErrorClass('error');
+      setTextErrorClass('error');
     } else {
       showError(e.target);
     }
@@ -152,11 +167,18 @@ const Contact = () => {
           {emailErrorMessage}
         </span>
         <textarea
-          maxLength="1000"
-          name="message"
+          minLength="10"
+          maxLength="100"
+          name="text"
           id="textarea"
           placeholder="Write a message here! Give more details about what you're looking for."
+          onInput={checkInput}
+          required
         />
+        <span aria-live="polite" className={textErrorClass}>
+          {textErrorMessage}
+        </span>
+
         <Button type="submit" name="Send" />
         <div
           className="g-recaptcha"
