@@ -121,8 +121,8 @@ const Contact = () => {
       <div className="info">
         <div className="title">Contact</div>
         <div className="body">
-          Feel free to reach out with any questions or requests you may have.
-          I will be sure to respond as soon as I am able!
+          Feel free to reach out with any questions or requests you may have. I
+          will be sure to respond as soon as I am able!
         </div>
       </div>
       <form method="post" onSubmit={submitForm} noValidate>
@@ -157,7 +157,7 @@ const Contact = () => {
           id="textarea"
           placeholder="Write a message here! Give more details about what you're looking for."
         />
-        <Button type='submit' name='Send' />
+        <Button type="submit" name="Send" />
         <div
           className="g-recaptcha"
           data-sitekey={process.env.REACT_APP_SITE_KEY_PROD}

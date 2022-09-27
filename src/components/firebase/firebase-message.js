@@ -12,21 +12,27 @@ const SaveMessage = async (clientInfo) => {
   // Initialize reCAPTCHA check
   initializeAppCheck(app, {
     provider: new ReCaptchaV3Provider(process.env.REACT_APP_SITE_KEY_PROD),
-    isTokenAutoRefreshEnabled: true,
+    isTokenAutoRefreshEnabled: true
   });
 
   // Generate a custom ID for new client in case of identical names
   const customId = Math.random().toString(36).slice(2);
-  const newDoc = doc(firestore, 'TR-client-contact', `${clientInfo.name} (${customId})`);
+  const newDoc = doc(
+    firestore,
+    'TR-client-contact',
+    `${clientInfo.name} (${customId})`
+  );
   await setDoc(newDoc, {
     name: clientInfo.name,
     email: clientInfo.email,
     message: clientInfo.message,
-    timestamp: serverTimestamp(),
+    timestamp: serverTimestamp()
   })
     .then(() => {
       // Confirmation message -- to be replaced by CSS animation
-      alert('Thank you for your submission! We\'ll reach out as soon as possible!');
+      alert(
+        'Thank you for your submission! We\'ll reach out as soon as possible!'
+      );
       window.location.reload(); // Clears form after receiving data
     })
     .catch((error) => {

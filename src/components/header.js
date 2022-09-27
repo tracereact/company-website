@@ -13,10 +13,10 @@ const Header = () => {
       <div className="menu">
         <ul className="menu-items">
           <li className="menu-item">
-            <Button type='link' name='HOME' link='/' />
+            <Button type="link" name="HOME" link="/" />
           </li>
           <li className="menu-item">
-            <Button type='link' name='ABOUT' link='/#about' />
+            <Button type="link" name="ABOUT" link="/#about" />
           </li>
           {/* <li className="menu-item">
             <Button type='link' name='PROJECTS' link='/#projects' />
@@ -25,7 +25,7 @@ const Header = () => {
             <Button type='link' name='BLOG' link='/#' />
           </li> */}
           <li className="menu-item">
-            <Button type='link' name='CONTACT' link='/#contact' />
+            <Button type="link" name="CONTACT" link="/#contact" />
           </li>
         </ul>
       </div>

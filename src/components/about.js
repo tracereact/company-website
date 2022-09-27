@@ -10,14 +10,17 @@ const About = () => {
           <strong>
             Hi there! I&apos;m Travis, CEO and sole-member of Trace React, LLC.
           </strong>
-          <br /><br />
+          <br />
+          <br />
           <em>
-            Growing up, I always had a passion for technology. From jail-breaking my PlayStation Portable and iPod touch to opening up old
-            laptops to see how they worked, I was simply intrigued.
+            Growing up, I always had a passion for technology. From
+            jail-breaking my PlayStation Portable and iPod touch to opening up
+            old laptops to see how they worked, I was simply intrigued.
           </em>
-          <br /><br />
+          <br />
+          <br />
           <strong>
-            These days, I find myself deeply enjoying website development. 
+            These days, I find myself deeply enjoying website development.
           </strong>
         </div>
       </div>
