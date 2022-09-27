@@ -31,14 +31,14 @@ const SaveMessage = async (clientInfo) => {
     .then(() => {
       // Confirmation message -- to be replaced by CSS animation
       alert(
-        'Thank you for your submission! We\'ll reach out as soon as possible!'
+        'Thank you for your submission! I will reach out as soon as possible!'
       );
       window.location.reload(); // Clears form after receiving data
     })
     .catch((error) => {
       // Confirmation message -- to be replaced by CSS animation
       alert('Oops, something went wrong! Please try again later.');
-      console.error('Error writing new message to Firebase Database', error);
+      console.error('Error writing new message to Firebase Database: ', error);
     });
 };
 

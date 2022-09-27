@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
 .header {
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   width: var(--page-width);
   min-width: var(--page-min-width);
   max-width: var(--page-max-width);

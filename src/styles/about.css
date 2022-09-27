@@ -24,7 +24,7 @@
 
 .about .info {
   font-size: var(--text-size);
-  padding-right: 2rem;
+  padding-right: 5rem;
   word-wrap: break-word;
 }
 
@@ -34,7 +34,13 @@
   padding-bottom: 3rem;
 }
 
+.about .message {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .about .image {
+  margin-top: 2.5rem;
   height: 25rem;
   width: 20rem;
   min-height: 5rem;
@@ -50,4 +56,13 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   flex-shrink: 0;
+}
+
+.about a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.about a:hover {
+  text-decoration: underline;
 }

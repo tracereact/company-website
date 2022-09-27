@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/header.css';
-import Icon from './icon';
+// import Icon from './icon';
 import Button from './utils/button';
 
 const Header = () => {
   return (
     <div id="page-top" className="header">
       <div className="company-logo">
-        <Icon />
+        {/* <Icon /> */}
         <div className="company-name">tracereact</div>
       </div>
       <div className="menu">

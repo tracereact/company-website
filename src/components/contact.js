@@ -110,7 +110,7 @@ const Contact = () => {
           sendInfo();
         })
         .catch((error) => {
-          console.error('Error occurred while handling captcha\n', error);
+          console.error('Error occurred while handling captcha: ', error);
         });
     });
     return true;

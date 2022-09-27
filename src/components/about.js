@@ -20,8 +20,30 @@ const About = () => {
           <br />
           <br />
           <strong>
-            These days, I find myself deeply enjoying website development. So much so, I created a business to help design and develop
-            websites for others!
+            These days, I find myself deeply enjoying website development. So
+            much so, I created a business to help design and develop websites
+            for others! I love bringing ideas to life with eye-pleasing designs
+            and slick animations.
+          </strong>
+          <br />
+          <br />
+          <strong>
+            I work with React, JavaScript (ES6+), CSS, and Firebase to deliver
+            quality products in a timely manner; view my resume&nbsp;
+            <span>
+              <a
+                href="https://linkedin.com/in/travismcginley"
+                target="_blank"
+                rel="noreferrer"
+              >
+                here
+              </a>
+            </span>
+            .&nbsp;Feel free to reach out using the form&nbsp;
+            <span>
+              <a href="/#contact">below</a>
+            </span>
+            &nbsp;if you would like to learn more.
           </strong>
         </div>
       </div>
