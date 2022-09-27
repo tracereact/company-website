@@ -28,3 +28,8 @@
 .footer .disclaimer {
   font-size: 0.75rem;
 }
+
+.footer .disclaimer,
+.copyright {
+  text-align: center;
+}

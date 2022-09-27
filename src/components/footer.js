@@ -21,6 +21,13 @@ const Footer = () => {
             Font Awesome
           </a>
         </span>
+        <br />
+        This website is&nbsp;
+        <span>
+          <a href="https://github.com/tracereact/company-website" target="_blank" rel="noreferrer">
+            open-source
+          </a>
+        </span>
       </div>
     </div>
   );
