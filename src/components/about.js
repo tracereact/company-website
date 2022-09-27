@@ -21,9 +21,9 @@ const About = () => {
           <br />
           <strong>
             These days, I find myself deeply enjoying website development. So
-            much so, I created a business to help design and develop websites
-            for others! I love bringing ideas to life with eye-pleasing designs
-            and slick animations.
+            much so, I created a business to help design, develop, <em>and</em>{' '}
+            host websites for others! I love bringing ideas to life with
+            eye-pleasing designs and slick animations.
           </strong>
           <br />
           <br />
