@@ -24,10 +24,8 @@ const Sidebar = () => {
           <i className="linkedin icon link fa-brands fa-linkedin" />
         </a>
       </div>
-      <div className="return-top">
-        <div onClick={scrollUp} aria-hidden="true">
-          <i className="icon fa-solid fa-arrow-up" />
-        </div>
+      <div className="return-top" onClick={scrollUp} aria-hidden="true">
+        <i className="icon fa-solid fa-arrow-up" />
       </div>
     </div>
   );

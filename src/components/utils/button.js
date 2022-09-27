@@ -21,7 +21,7 @@ const Button = (props) => {
 
   if (type === 'submit') {
     return (
-      <div className="custom"><button type="submit">{name}</button></div>
+      <div className="custom"><button className="custom" type="submit">{name}</button></div>
     );
   }
   

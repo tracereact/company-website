@@ -159,9 +159,6 @@ const Contact = () => {
           id="textarea"
           placeholder="Write a message here! Give more details about what you're looking for."
         />
-        <button type="submit" id="send">
-          Send
-        </button>
         <Button type='submit' name='Send' />
         <div
           className="g-recaptcha"
