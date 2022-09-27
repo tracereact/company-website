@@ -8,7 +8,7 @@ const About = () => {
         <div className="title">About</div>
         <div className="message">
           <strong>
-            Hi there! I&apos;m Travis, CEO and sole-member of Trace React, LLC.
+            Hi there! I&apos;m Travis, founder and CEO of Trace React, LLC.
           </strong>
           <br />
           <br />
@@ -20,7 +20,8 @@ const About = () => {
           <br />
           <br />
           <strong>
-            These days, I find myself deeply enjoying website development.
+            These days, I find myself deeply enjoying website development. So much so, I created a business to help design and develop
+            websites for others!
           </strong>
         </div>
       </div>
