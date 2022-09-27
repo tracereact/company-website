@@ -106,4 +106,20 @@
   .custom:hover {
     animation: none;
   }
+
+  .custom button {
+    border: 0.25rem solid var(--primary-color);
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .custom button:active {
+    background-color: var(--primary-color);
+    border-color: black;
+    color: black;
+  }
+
+  .custom button:hover {
+    animation: none;
+  }
 }

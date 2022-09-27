@@ -51,6 +51,7 @@
 }
 
 .fa-bars {
+  align-self: center;
   display: none;
   color: var(--primary-color);
 }
@@ -59,6 +60,7 @@
   .header {
     justify-content: center;
     align-items: center;
+    width: 100vw;
   }
 
   .menu-item {
@@ -102,7 +104,9 @@
   }
 
   .fa-bars {
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     color: var(--primary-color);
   }
 }
