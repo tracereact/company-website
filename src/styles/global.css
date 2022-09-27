@@ -10,6 +10,7 @@
   --page-min-width: 30rem;
   --page-width: 80vw;
   --page-max-width: 70rem;
+  --title-size: 2.5rem;
 
   /* Global Settings */
   font-family: 'Prompt', sans-serif;
