@@ -18,12 +18,12 @@ const Header = () => {
           <li className="menu-item">
             <Button type='link' name='ABOUT' link='/#about' />
           </li>
-          <li className="menu-item">
+          {/* <li className="menu-item">
             <Button type='link' name='PROJECTS' link='/#projects' />
-          </li>
-          <li className="menu-item">
+          </li> */}
+          {/* <li className="menu-item">
             <Button type='link' name='BLOG' link='/#' />
-          </li>
+          </li> */}
           <li className="menu-item">
             <Button type='link' name='CONTACT' link='/#contact' />
           </li>

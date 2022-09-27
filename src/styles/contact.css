@@ -15,6 +15,7 @@
   justify-content: space-between;
   width: 20rem;
   height: auto;
+  font-size: var(--text-size);
 }
 
 .contact .info .title {
@@ -32,21 +33,35 @@
   width: 20rem;
 }
 
-.contact input {
-  width: 100%;
-}
-
 .contact textarea {
-  width: 100%;
   min-height: 8rem;
-  font-family: inherit;
 }
 
 .contact input,
 .contact textarea {
+  width: 100%;
   padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  font-size: var(--text-size);
+  border: none;
+  /* border-radius: 0.5rem; */
 }
 
-.contact button {
-  padding: 0.25rem 0.5rem;
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+  margin-top: -1rem;
+  font-size: 80%;
+  color: var(--primary-color);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.error.active {
+  background-color: rgba(153, 0, 0, 0.5);
 }
