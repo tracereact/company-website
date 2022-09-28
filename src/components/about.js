@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from './carousel';
 import '../styles/about.css';
 
 const About = () => {
@@ -48,6 +49,7 @@ const About = () => {
         </div>
       </div>
       <div className="image" />
+      <Carousel  />
     </div>
   );
 };
