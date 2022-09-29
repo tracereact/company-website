@@ -5,6 +5,7 @@ import '../styles/content.css';
 const Content = () => {
   return (
     <div className="content">
+      <div id="page-top" className="anchor" />
       <div id="about">
         <About />
       </div>

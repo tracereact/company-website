@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <div id="page-top" className="header">
+    <div className="header">
       <div className="company-logo">
         {/* <Icon /> */}
         <div className="company-name">tracereact</div>
