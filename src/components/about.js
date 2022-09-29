@@ -9,7 +9,7 @@ const About = () => {
         <div className="title">About</div>
         <div className="message">
           <strong>
-            Hi there! I&apos;m Travis, founder and CEO of Trace React, LLC.
+            Hi there! I&apos;m Travis, founder and CEO of Trace React.
           </strong>
           <br />
           <br />
