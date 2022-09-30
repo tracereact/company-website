@@ -1,19 +1,51 @@
 @import url('./global.css');
 
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 1.5rem;
+  position: relative;  
+  
+  /* Testing */
+  width: 15rem;
+  border: 2px solid blue;
+}
+
+.carousel-container .button {
+  position: absolute;
+  border: 0.1rem solid black;
+  background-color: inherit;
+  opacity: 1;
+}
+
+.carousel-container .button:hover {
+  cursor: pointer;
+}
+
+.carousel-container .button:active {
+  scale: 0.995;
+}
+
+.carousel-container .previous.button {
+  left: 0.25rem;
+}
+
+.carousel-container .next.button {
+  right: 0.25rem;
+}
+
 .carousel {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3.5rem;
-  height: 10rem;
-  /* width: 100%; */
-  overflow: auto;
+  width: 100%;
 
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 1.5rem;
 
-  /* Testing */
-  width: 15rem;
   border: 2px solid red;
 }
 
