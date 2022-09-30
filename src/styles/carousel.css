@@ -5,9 +5,6 @@
   justify-content: center;
   align-items: center;
   height: 10rem;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 1.5rem;
   position: relative;  
   
   /* Testing */
@@ -43,10 +40,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 3.5rem;
-  width: 100%;
-
-
-  border: 2px solid red;
+  width: auto;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 1.5rem;
 }
 
 .carousel .item {
