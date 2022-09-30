@@ -3,79 +3,85 @@ import '../styles/carousel.css';
 
 const Carousel = () => {
   const [carouselItems, setItems] = useState(null);
+  let pos;
 
-  // Gather items once page loads
+  // Gather items once page loads then scroll to initial item
   useEffect(() => {
-    setItems(document.querySelectorAll('.carousel .item'));
-  }, []);
-
-  let pos = 0;
-  // const carouselItems = document.querySelectorAll('.carousel .item');
+    if (carouselItems) {
+      if (carouselItems.length % 2 === 0) {
+        // Go to the first median
+        pos = (carouselItems.length / 2) - 1; 
+      } else {
+        // Take the integer portion only
+        pos = Math.trunc(carouselItems.length / 2);
+      }
+      
+      carouselItems[pos].scrollIntoView ({
+        behavior: 'smooth',
+        inline: 'start',
+        block: 'nearest'
+      });
+    } else {
+      setItems(document.querySelectorAll('.carousel .item'));
+    }
+  }, [carouselItems]);
 
   // Add or remove a clone from either side to simulate infinite scrolling
   const rotateItems = (dir) => {
-    console.log(`rotating ${dir}...`);
-    
-    if (dir === 'forward') {
-      const tempElement = carouselItems[pos - 1].cloneNode(true);
-      carouselItems[carouselItems.length - 1].after(tempElement);
-      carouselItems[pos - 1].remove();
+    try {
+      console.log(`rotating ${dir}...`);
+      
+      if (dir === 'forward') {
+        const tempElement = carouselItems[0].cloneNode(true);
+        carouselItems[0].remove();
+        carouselItems[carouselItems.length - 1].after(tempElement);
 
-    } else {
-      const tempElement = carouselItems[pos + 1].cloneNode(true);
-      carouselItems[0].before(tempElement);
-      carouselItems[pos + 1].remove();
+      } else {
+        const tempElement = carouselItems[carouselItems.length - 1].cloneNode(true);
+        carouselItems[carouselItems.length - 1].remove();
+        carouselItems[0].before(tempElement);
+      }
+      setItems(document.querySelectorAll('.carousel .item'));
+    } catch (error) {
+      console.error('Error with rotating items: ', error);
     }
-    setItems(document.querySelectorAll('.carousel .item'));
   };
 
   const changeItem = () => {
-    // Something is wrong with the carousel items list
-    if (!carouselItems || carouselItems.length < 1) { 
-      console.log('Error with items');
-      return; 
+    try {
+      // Helper function to handle negative inputs
+      const mod = (a, b) => {
+        return ((a % b) + b) % b;
+      };
+
+      const itemNum = mod(pos, carouselItems.length);
+      console.log(`Heading to item number ${itemNum}`);
+
+      carouselItems[itemNum].scrollIntoView ({
+        behavior: 'smooth',
+        inline: 'start',
+        block: 'nearest'
+      });
+
+    } catch(error) {
+      // Something is wrong with the carousel items list
+      console.error('Error with changing items: ', error);
     }
-
-    // Helper function to handle negative inputs
-    const mod = (a, b) => {
-      return ((a % b) + b) % b;
-    };
-
-    const itemNum = mod(pos, carouselItems.length);
-    console.log(`Heading to item number ${itemNum}`);
-    // console.log(`Pos: ${pos}`);
-    carouselItems[itemNum].scrollIntoView ({
-      behavior: 'smooth',
-      inline: 'start',
-      block: 'nearest'
-    });
-
   };
 
   // Go to the previous item in the carousel
   const goBack = () => {
-
-    console.log('Going back..');
+    console.log('Loading previous..');
     pos -= 1;
-
-    // Temp failsafe
-    // if (pos < 0) { pos = 0; return; }
     changeItem();
-
     rotateItems('back');
   };
 
   // Go to the next item in the carousel
   const goForth = () => {
-    console.log('Going up..');
+    console.log('Loading next..');
     pos += 1;
-
-    // Temp failsafe
-    // if (pos > carouselItems.length - 1) { pos = carouselItems.length - 1; return; }
-
-    // console.log('Going down..');
     changeItem();
-
     rotateItems('forward');
   }; 
 
@@ -99,6 +105,11 @@ const Carousel = () => {
           <i className="item-icon fa-brands fa-css3" />
           <div className="item-title">CSS3</div>
           <div className="item-num">3</div>
+        </li>
+        <li id="css" className="item">
+          <i className="item-icon fa-brands fa-react" />
+          <div className="item-title">React</div>
+          <div className="item-num">4</div>
         </li>
       </ul>
       <button className="next button" type="button" onClick={goForth}>
