@@ -3,11 +3,11 @@ import '../styles/carousel.css';
 
 const Carousel = () => {
   const [carouselItems, setItems] = useState(null);
-  let pos;
 
   // Gather items once page loads then scroll to initial item
   useEffect(() => {
     if (carouselItems) {
+      let pos = 0;
       if (carouselItems.length % 2 === 0) {
         // Go to the first median
         pos = (carouselItems.length / 2) - 1; 
@@ -21,6 +21,7 @@ const Carousel = () => {
         inline: 'start',
         block: 'nearest'
       });
+      carouselItems[pos + 1].dataset.active = true;
     } else {
       setItems(document.querySelectorAll('.carousel .item'));
     }
@@ -47,21 +48,16 @@ const Carousel = () => {
     }
   };
 
-  const changeItem = () => {
+  const changeItem = (offset) => {
     try {
-      // Helper function to handle negative inputs
-      const mod = (a, b) => {
-        return ((a % b) + b) % b;
-      };
+      const activeItem = document.querySelector('[data-active]');
+      let newIndex = [...carouselItems].indexOf(activeItem) + offset;
 
-      const itemNum = mod(pos, carouselItems.length);
-      console.log(`Heading to item number ${itemNum}`);
-
-      carouselItems[itemNum].scrollIntoView ({
-        behavior: 'smooth',
-        inline: 'start',
-        block: 'nearest'
-      });
+      if (newIndex < 0) newIndex = carouselItems.length - 1;
+      if (newIndex >= carouselItems.length) newIndex = 0;
+      
+      carouselItems[newIndex].dataset.active = true;
+      delete activeItem.dataset.active;
 
     } catch(error) {
       // Something is wrong with the carousel items list
@@ -72,16 +68,14 @@ const Carousel = () => {
   // Go to the previous item in the carousel
   const goBack = () => {
     console.log('Loading previous..');
-    pos -= 1;
-    changeItem();
+    changeItem(-1);
     rotateItems('back');
   };
 
   // Go to the next item in the carousel
   const goForth = () => {
     console.log('Loading next..');
-    pos += 1;
-    changeItem();
+    changeItem(1);
     rotateItems('forward');
   }; 
 

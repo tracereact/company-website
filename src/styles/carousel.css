@@ -1,14 +1,16 @@
 @import url('./global.css');
 
 .carousel-container {
+  justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10rem;
   position: relative;  
+  /* overflow: hidden; */
   
   /* Testing */
-  width: 20rem;
+  width: 25rem;
   border: 2px solid blue;
 }
 
@@ -18,6 +20,7 @@
   background: none;
   font-size: 2rem;
   opacity: 0.45;
+  z-index: 10;
 }
 
 .carousel-container .button:hover {
@@ -43,7 +46,8 @@
   align-items: center;
   /* gap: 3.5rem; */
   width: auto;
-  overflow: auto;
+  height: 100%;
+  overflow: hidden;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 1.5rem;
 }
@@ -63,9 +67,10 @@
   min-width: 7rem;
   min-height: auto;
   padding-top: 1rem;
-  margin: 0 5rem;
+  margin: 0 3rem;
+  opacity: 0.5;
 
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .carousel .item-icon {
@@ -82,10 +87,15 @@
   padding-top: 0.5rem;
 }
 
-.carousel .item.selected {
+/* .carousel .item[data-active] {
   scale: 1.1;
   border: 0.15rem solid var(--primary-color);
   background-color: black;
   color: var(--primary-color);
   font-weight: bold; 
+} */
+
+.carousel .item[data-active] {
+  scale: 1.1;
+  opacity: 1; 
 }
